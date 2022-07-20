@@ -8,7 +8,7 @@
                 <p class="lh-base"> I looked into coding when I was at a cross-roads in my life. After university I realised I am motivated by creating things and standing apart from the crowd. Taking a coding course satisfied those yearnings in me. From the get go at the Life Choices Bootcamp, I have been able to challenge and express myself in a way that is relevant.</p>
               </div>
             <div id="siyolise" class="col-md-6" >
-                <img alt="siyolise" :src="imgUrl"  @mouseover="hover=true" @mouseleave="hover=false" :class="{ active: hover }"  class="rounded">
+                <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" >{{imgUrl}}</a>
                 <!-- <i data-toggle="animation"
                 data-animation-reset="true"
                 data-animation="hover"></i> -->
@@ -21,14 +21,23 @@
 <script>
 // import image from "./assets/siyolise.jpg"
 
-export default {
-  data(){
-  return{
-    imgUrl:'https://i.postimg.cc/6pPBpjVw/Siyolise-1.jpg',
-    hover: false
-  }
+export default{
+  name: "#siyolise",
+  data () {
+    return{
+      imgUrl: "https://i.postimg.cc/65tvcGrZ/IMG-20220421-WA0008.jpg"
+    }
+  }, 
+  methods: {
+    mouseover(){
+      this.imgUrl = "https://i.postimg.cc/t4Gm2kr5/Siyolise-1.jpg"
+    },    
+    mouseleave(){
+      this.imgUrl = "https://i.postimg.cc/65tvcGrZ/IMG-20220421-WA0008.jpg"
+    }
+  },
 }
-}
+
 </script>
 
 <style scoped>
@@ -39,7 +48,6 @@ export default {
 #siyolise{
 object-fit:cover;
 object-position: center;
-filter:grayscale(100%),
 }
 /* .active{
   filter:grayscale(0%)
