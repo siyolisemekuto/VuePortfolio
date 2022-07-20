@@ -8,7 +8,7 @@
                 <p class="lh-base"> I looked into coding when I was at a cross-roads in my life. After university I realised I am motivated by creating things and standing apart from the crowd. Taking a coding course satisfied those yearnings in me. From the get go at the Life Choices Bootcamp, I have been able to challenge and express myself in a way that is relevant.</p>
               </div>
             <div id="siyolise" class="col-md-6" >
-                <a v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" >{{imgUrl}}</a>
+                <img :src="imgUrl" v-on:mouseover="mouseover" v-on:mouseleave="mouseleave" />
                 <!-- <i data-toggle="animation"
                 data-animation-reset="true"
                 data-animation="hover"></i> -->
