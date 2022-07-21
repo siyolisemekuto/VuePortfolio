@@ -22,24 +22,30 @@ export default {
                 },
                 {
                     "id":"2",
+                    "imgurl":"https://i.postimg.cc/43H8pJvx/Capture.png",
+                    "name":"Godwin Dzvapatsva(Ph.D)",
+                    "comment":"Along with her undeniable talent, Siyolise has always been an absolute joy to work with. She is a true team player, and always manages to foster positive discussions and bring the best out of other students. Her key strengths are on the frontend side of development. I recommend her without hesitation."
+                },
+                {
+                    "id":"3",
                     "imgurl":"https://i.postimg.cc/Njdcpq76/smangele.jpg",
                     "name":"Smangele Mntungwa",
                     "comment":"Siyolise is a kind-hearted, trustworthy and compassionate person. She has unlimited potential. I believe that she is strong and unshaken, and will complete anything she set her sights on."
                 },
                 {
-                    "id":"3",              
+                    "id":"4",              
                     "imgurl":"https://i.postimg.cc/tg9jzRxC/Sabelo.jpg",
                     "name":"Sabelo Mdashe",
                     "comment":"Siyolise has the ability to befriend anyone she meets, as she is a natural extrovert and is noticeably confident. She interacts well with everyone because of her confidence and her amicable and very sincere personality. Aside from enjoying a wide circle of loyal friends and peers, Siyolise also has the respect of her colleagues."
                 },
                 {
-                    "id":"4",              
+                    "id":"5",              
                     "imgurl":"https://i.postimg.cc/W1v3Qvkx/sibonile.jpg",
                     "name":"Sibonile Nyalambisa",
                     "comment":"Siyolise is polite and respectful. She is a great communicator and can manage people to get tasks done on time."
                 },
                 {
-                    "id":"5",                   
+                    "id":"6",                   
                     "imgurl":"https://i.postimg.cc/m23pyYNC/Lihle.jpg",
                     "name":"Lihle Goliath",
                     "comment":"Siyolise is a kind-hearted, trustworthy and compassionate person. She has unlimited potential. I believe that she is strong and unshaken, and will complete anything she set her sights on."

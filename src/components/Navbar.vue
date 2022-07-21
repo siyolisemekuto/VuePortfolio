@@ -1,12 +1,15 @@
 <template>
-    <header class="navbar">
+    <header :class="{'scrolled-nav':scrollPosition}">
     <nav>
-       <ul v-show="!mobile" class="nav-links">
-       <router-link to="/" class="nav-brand">Siyolise M</router-link>
-       <li><router-link to="/about" class="nav-link">About</router-link></li>
-       <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
-       <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
-       </ul>
+        <div class="branding">
+       <router-link to="/" class="nav-brand nav-links" ><img :src="logo"></router-link>
+        </div>  
+        <ul v-show="!mobile" class="nav-links">
+          <li><router-link to="/about" class="link">About</router-link></li>
+          <li><router-link to="/projects" class="link">Projects</router-link></li>
+          <li><router-link to="/testimonials" class="link">Testimonials</router-link></li>
+          <li><router-link to="/contact" class="link">Contact</router-link></li>
+        </ul>
        <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="fa-solid fa-bars" :class="{'icon-active':mobileNav}"></i>
        </div>
@@ -25,6 +28,7 @@
 export default {
     data(){
         return{
+            logo:"https://i.postimg.cc/DfBt2NmB/logo-removebg-preview.png",
             scrollPosition:null,
             mobile:null,
             mobileNav:null,
@@ -69,9 +73,11 @@ export default {
    .nav-brand{
     object-position: left top;
    }
-   /* .nav-brand{
-    padding-top:10px;
-   } */
+   .nav-brand{
+    height:10px;
+    width:10px;
+    border-radius: 20px;
+   }
 
     /* nav{
         position:relative;

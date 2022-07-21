@@ -10,8 +10,8 @@
               <h4>{{project.name}}</h4>
               <div class="project-desc shadow p-3 lh-base">{{project.description}}</div>
               <div id="project-link">
-                <a>{{project.github}}<i class="fa-brands fa-github-square"></i></a>
-                <a>{{project.netlify}}<i class="fa-solid fa-up-right-from-square py-4"></i></a>
+                <a href="project.github"><i class="fa-brands fa-github-square"></i></a>
+                <a href="project.netlify"><i class="fa-solid fa-up-right-from-square py-4"></i></a>
               </div>
             </div>
             
@@ -79,19 +79,23 @@ export default {
 
 .project-desc{
     width:130%;
-    background-color:rgb(5,14,26);
+    background-color:#F4EAFD;
     display: flex;
     align-items: flex-end;
 }
-#project-link{
+/* #project-link{
    
     font-size: 1.7em;
     text-decoration: none;
     color: rgb(204, 214, 246);
-} 
+}  */
 img{
-    width: 800px; 
-    height: 50vh; 
+    width: 400px; 
+    height: 25vh; 
     object-fit: cover;
+}
+.project-container{
+    object-position: center;
+    padding: 0 10em ;
 }
 </style>

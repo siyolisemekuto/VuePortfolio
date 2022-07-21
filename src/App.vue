@@ -25,7 +25,7 @@ export default{
   font-family: 'ubuntu';
 }
   .container{
-    height:100vh;
+    height:100vh min-content;
   }
 
 
