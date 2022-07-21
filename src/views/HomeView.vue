@@ -1,8 +1,7 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <section class="container shadow p-3 mb-5 bg-body rounded">
+   <HelloWorld/>
+  </section>
 </template>
 
 <script scoped>
@@ -16,3 +15,11 @@ export default {
   }
 }
 </script>
+<style scoped>
+section{
+    background-color: #EBE2F4;
+    height:100vh;
+  }
+
+
+</style>

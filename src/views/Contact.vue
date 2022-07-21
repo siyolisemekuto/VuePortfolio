@@ -61,4 +61,8 @@ export default {
       /* border: none; */
       border: nonw;
     }
+    section{
+    background-color: #EBE2F4;
+    height:100vh;
+  }
 </style>

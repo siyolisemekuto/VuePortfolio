@@ -37,7 +37,7 @@ export default {
         {
             "id":2,
             "name":"To-do List App",
-            "imageURL":"https://i.postimg.cc/MGTWRmgK/todo.png",
+            "imageURL":"https://i.postimg.cc/4NBtNN4M/Cape.png",
             "description":"An assignment that required mainy JavaScript and was focused on CRUD funtionality",
             "github":"https://github.com/siyolisemekuto/todoListApp",
             "netlify":"https://subtle-unicorn-3f47cc.netlify.app/"
@@ -45,7 +45,7 @@ export default {
         {
             "id":3,
             "name":"E-Commerce Property Listings",
-            "imageURL":"https://picsum.photos/200/300",
+            "imageURL":"https://i.postimg.cc/Gpd7DpnC/Capte.png",
             "description":"An assignment that focused on sorting funtionality and required implentation of CRUD functionality",
             "github":"https://github.com/siyolisemekuto/propertyListingProject",
             "netlify":"https://astonishing-daffodil-734d81.netlify.app/"
@@ -57,6 +57,22 @@ export default {
             "description":"A personal portfolio made with HTML and CSS mostly. This project showcased how well I had grasped these languages. There is also some experimenting with JavaScript which I only had an introduction to.",
             "github":"https://github.com/siyolisemekuto/end-of-module-project",
             "netlify":"https://resplendent-sunburst-f5562e.netlify.app/"
+        },
+        {
+            "id":5,
+            "name":"Functioning Calculator",
+            "imageURL":"https://i.postimg.cc/7PjfZGSf/Capt.png",
+            "description":"An updated calculator with all the functionality and a change of color using Vanilla JavaScript.",
+            "github":"https://github.com/siyolisemekuto/updatedCalculator",
+            "netlify":"https://statuesque-gaufre-31ba81.netlify.app/"
+        },
+        {
+            "id":6,
+            "name":"Restaurant Webpage",
+            "imageURL":"https://i.postimg.cc/QdQbbrjJ/pture.png",
+            "description":"I created a webpage using Bootstrap 5, HTML 5 and CSS. The project required me to learn how to read documentation so I could attempt to use skills I had not officially been taught before. Through the course of a week I had to replicate the example given as closely as possible.",
+            "github":"https://github.com/siyolisemekuto/bootstrap/tree/main/website",
+            "netlify":"https://lighthearted-wisp-898038.netlify.app/"
         }
     ],
         };

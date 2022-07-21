@@ -12,5 +12,10 @@ export default {
 }
 </script>
 <style scoped>
+section{
+    background-color: #EBE2F4;
+    height:100vh;
+  }
+
     
 </style>

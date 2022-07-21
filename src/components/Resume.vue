@@ -1,52 +1,15 @@
 <template>
   <div id="experience">
-  <h1>Education and Experience</h1>
-  <div class="d-flex align-items-start" id="nav-pill">
+  <h1>Experience</h1>
+  <div class="d-flex align-items-start" id="nav-pill"  v-for="experience in experiences" :key="experience.id">
     <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <button class="nav-link " id="OprahWinfreyLeadershipAcedemy-tab" data-bs-toggle="pill" data-bs-target="#OprahWinfreyLeadershipAcedemy" type="button" role="tab" aria-controls="OprahWinfreyLeadershipAcedemy" aria-selected="true">Oprah Winfrey Leadership Academy</button>
-      <button class="nav-link" id="RhodesUniversity-tab" data-bs-toggle="pill" data-bs-target="#RhodesUniversity" type="button" role="tab" aria-controls="RhodesUniversity" aria-selected="false">Rhodes University</button>
-      <button class="nav-link" id="RhodesUniversitySRCMediaTeam-tab" data-bs-toggle="pill" data-bs-target="#RhodesUniversitySRCMediaTeam" type="button" role="tab" aria-controls="RhodesUniversitySRCMediaTeam" aria-selected="false">Rhodes University SRC Media Team</button>
-      <button class="nav-link" id="ParliamentaryMonitoringGroup-tab" data-bs-toggle="pill" data-bs-target="#ParliamentaryMonitoringGroup" type="button" role="tab" aria-controls="ParliamentaryMonitoringGroup" aria-selected="false">Parliamentary Monitoring Group</button>
-      <button class="nav-link" id="StatsSACensus2022-tab" data-bs-toggle="pill" data-bs-target="#StatsSACensus2022" type="button" role="tab" aria-controls="StatsSACensus2022" aria-selected="false">Stats SA Cenus 2022</button>
-      <button class="nav-link" id="LifeChoices-tab" data-bs-toggle="pill" data-bs-target="#LifeChoices" type="button" role="tab" aria-controls="LifeChoices" aria-selected="false">Life Choices</button>
+      <button class="nav-link " id={{experience.id}} data-bs-toggle="pill" data-bs-target={{experience.id}} type="button" role="tab" aria-controls={{experience.name}} aria-selected="true">{{experience.name}}</button>
     </div>
     <div class="tab-content" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id="OprahWinfreyLeadershipAcedemy" role="tabpanel" aria-labelledby="OprahWinfreyLeadershipAcedemy">
-        <a href="https://www.oprahfoundation.org/portfolio-item/oprah-leadership-academy"><h5 class="mb-0">Matric</h5></a>
-        <span id="date" class="mb-15">November 2017</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> IEB Bachelor Pass</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Results available upon request</p>
-      </div>
-      <div class="tab-pane fade" id="RhodesUniversity" role="tabpanel" aria-labelledby="RhodesUniversity">
-        <a href="https://www.ru.ac.za/facultyofhumanities/"><h5 class="mb-0">Bachelor of Arts (2nd Year)</h5></a>
-        <span id="date" class="mb-15">February 2018 - November 2021</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Majoring in Philosophy and Economics</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Distinction in Psychology 1</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Results available upon request</p>
-      </div>
-      <div class="tab-pane fade" id="RhodesUniversitySRCMediaTeam" role="tabpanel" aria-labelledby="RhodesUniversitySRCMediaTeam">
-        <a href="https://www.ru.ac.za/studentrepresentativecouncil/"><h5 class="mb-0">Deputy Writing Editor</h5></a>
-        <span id="date" class="mb-15">February 2020 - November 2020</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Writing Editor</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Writing and editing articles and SRC statements</p>
-      </div>
-      <div class="tab-pane fade" id="ParliamentaryMonitoringGroup" role="tabpanel" aria-labelledby="ParliamentaryMonitoringGroup">
-        <a href="https://pmg.org.za/committee/51/"><h5 class="mb-0">Freelance Monitor</h5></a>
-        <span id="date" class="mb-15">September 2021 - January 2022</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Monitoring Women, Youth and Persons with Disabilities Committee meetings</p>
-      </div>
-      <div class="tab-pane fade" id="StatsSACensus2022" role="tabpanel" aria-labelledby="StatsSACensus2022">
-        <a href="http://census.statssa.gov.za/"><h5 class="mb-0">Fielworker Supervisor</h5></a>
-        <span id="date" class="mb-15">February 2022 - March 2022</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Fieldwork verification</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Conducting publicity</p>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Quality control</p>
-
-      </div>
-      <div class="tab-pane fade" id="LifeChoices" role="tabpanel" aria-labelledby="LifeChoices">
-        <a href="https://www.lifechoices.co.za/academy"><h5 class="mb-0">Student</h5></a>
-        <span id="date" class="mb-15">March 2022 - Present</span>
-        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i> Web development</p>
+      <div class="tab-pane fade show active" id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
+        <a href={{experience.link}}><h5 class="mb-0">{{experience.role}}</h5></a>
+        <span id="date" class="mb-15">{{experience.date}}</span>
+        <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i>{{experience.achievement}}</p>
       </div>
     </div>
   </div>
@@ -55,7 +18,66 @@
 </template>
 <script>
 export default {
-    
+    data(){
+      return{
+        "experiences":[{
+          "id":"1",
+          "name":"Oprah Winfrey Leadership Acedemy",
+          "link":"https://www.oprahfoundation.org/portfolio-item/oprah-leadership-academy",
+          "role":"Matric",
+          "date":"November 2017",
+          "achievement":"IEB Bachelor Pass" 
+         },
+         {
+          "id":"2",
+          "name":"Rhodes University",
+          "link":"https://www.ru.ac.za/facultyofhumanities/",
+          "role":"Bachelor of Arts (2nd Year)",
+          "date":"February 2018 - November 2021",
+          "achievement":"Majoring in Philosophy and Economics" 
+         },
+         {
+          "id":"3",
+          "name":"Rhodes University SRC Media Team",
+          "link":"https://www.ru.ac.za/studentrepresentativecouncil/",
+          "role":"Deputy Writing Editor",
+          "date":"February 2020 - November 2020",
+          "achievement":" Writing and editing articles and SRC statements" 
+         }
+      ,
+         {
+          "id":"4",
+          "name":"Parliamentary Monitoring Group",
+          "link":"https://pmg.org.za/committee/51/",
+          "role":"Freelance Monitor",
+          "date":"September 2021 - January 2022",
+          "achievement":"Monitoring Women, Youth and Persons with Disabilities Committee meetings" 
+         }
+      ,
+         {
+          "id":"5",
+          "name":"StatsSA Census 2022",
+          "link":"http://census.statssa.gov.za/",
+          "role":"Fielworker Supervisor",
+          "date":"February 2022 - March 2022",
+          "achievement":"Fieldwork verification", 
+          "achievement":"Conducting publicity",
+          "achievement":"Quality control"
+         }
+      ,
+         {
+          "id":"6",
+          "name":"Life Choices",
+          "link":"https://www.lifechoices.co.za/academy",
+          "role":"Student",
+          "date":"March 2022 - Present",
+          "achievement":"Web development" 
+         }
+      
+      
+        ]
+      }
+    }
 }
 </script>
 <style>

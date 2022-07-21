@@ -2,24 +2,24 @@
 <section>
     <div class="container shadow p-3 mb-5 bg-body rounded">
       <AboutDetails/> 
-      <Resume/> 
+       
     </div>
 </section>
 </template>
 <script>
 import AboutDetails from '@/components/AboutDetails.vue'
-import Resume from '@/components/Resume.vue'
+
 export default {
-    
+      name:'AboutView',
       components:{
-          AboutDetails,
-           Resume    
+          AboutDetails
       } 
         
 }
 </script>
 <style scoped>
-   .section{
+   section{
     height:100vh;
+    background-color: #EBE2F4;
    } 
 </style>

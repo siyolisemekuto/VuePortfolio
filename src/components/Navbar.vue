@@ -6,6 +6,7 @@
         </div>  
         <ul v-show="!mobile" class="nav-links">
           <li><router-link to="/about" class="link">About</router-link></li>
+          <li><router-link to="/experience" class="link">Experience</router-link></li>
           <li><router-link to="/projects" class="link">Projects</router-link></li>
           <li><router-link to="/testimonials" class="link">Testimonials</router-link></li>
           <li><router-link to="/contact" class="link">Contact</router-link></li>
@@ -16,7 +17,9 @@
        <transition name="mobile-nav">
        <ul v-show="mobileNav" class="dropdown">
        <li><router-link to="/about" class="nav-link">About</router-link></li>
+       <li><router-link to="/experience" class="link">Experience</router-link></li>
        <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
+       <li><router-link to="/testimonials" class="link">Testimonials</router-link></li>
        <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
        </ul>
        </transition>
@@ -53,6 +56,7 @@ export default {
     top: 0;
     right: 0;
     left: 0;
+    z-index:3;
    }
    .nav-links{
     text-decoration:none;
