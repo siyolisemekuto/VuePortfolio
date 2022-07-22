@@ -16,9 +16,7 @@
             <li class="p-2 bd-highlight"><a href="https://www.facebook.com/profile.php?id=100075997964842" target="_blank"><i class="fa-brands fa-facebook-square"  id="facebook"></i></a></li>
             </ul>
           </div>
-        <div id="myEmail" class="fixed-bottom">
-            <a href="mailto:siyozamekuto2.0@gmail.com" target="_blank">siyozamekuto2.0@gmail.com</a>
-        </div>
+        
   
 </template>
 
@@ -42,6 +40,7 @@ export default {
 #landing div.container{
     text-align: justify;
     padding-top: 200px;
+  background-color: inherit;
 }
 #landing p.fs-5{
     font-family: 'Fira Code', monospace;
@@ -122,16 +121,7 @@ export default {
 ul{
     list-style-type: none;
 }
-#myEmail{
-    transform: rotate(90deg);
-    position: fixed;
-    bottom: 40%;
-    left: 92%; 
-    text-decoration: none;
-    color: rgb(204, 214, 246) !important;  
-    transition:0.3 linear;
-    
-}
+
 #twitter:hover{
     color: rgb(255, 20, 147);
 }
