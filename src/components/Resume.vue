@@ -1,12 +1,12 @@
 <template>
   <div id="experience">
   <h1>Experience</h1>
-  <div class="d-flex align-items-start row" id="nav-pill"  v-for="experience in experiences" :key="experience.id">
+  <div class="d-flex align-items-start row" id="nav-pill"  @click="show(experience.id)" v-for="experience in experiences" :key="experience.id">
     <div class="nav flex-column nav-pills me-3 col-md-6" id="v-pills-tab" role="tablist" aria-orientation="vertical">
       <button class="nav-link " id={{experience.id}} data-bs-toggle="pill" data-bs-target={{experience.id}} type="button" role="tab" aria-controls={{experience.name}} aria-selected="true">{{experience.name}}</button>
     </div>
     <div class="tab-content col-md-6" id="v-pills-tabContent">
-      <div class="tab-pane fade show active" id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
+      <div class="tab-pane fade"  id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
         <a href={{experience.link}}><h5 class="mb-0">{{experience.role}}</h5></a>
         <span id="date" class="mb-15">{{experience.date}}</span>
         <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i>{{experience.achievement}}</p>
@@ -18,6 +18,15 @@
 </template>
 <script>
 export default {
+  methods:{
+    show(id){
+      return{
+        "experience.role"
+        "experience.date"
+        "experience.achievement" 
+      }
+    }
+  }
     data(){
       return{
         "experiences":[{
