@@ -57,6 +57,9 @@ justify-content: center;
   display: flex;
   justify-content: center;
 }
+.info{
+  padding-left:8%;
+}
 
 
 

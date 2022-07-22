@@ -1,6 +1,8 @@
 <template>
   <section class="container shadow p-3 mb-5 bg-body rounded">
+    <div>
    <HelloWorld/>
+   </div>
   </section>
 </template>
 

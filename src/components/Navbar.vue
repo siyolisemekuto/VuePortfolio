@@ -2,7 +2,7 @@
     <header :class="{'scrolled-nav':scrollPosition}">
     <nav>
         <div class="branding">
-       <router-link to="/" class="nav-brand nav-links" ><img :src="logo"></router-link>
+       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img"></router-link>
         </div>  
         <ul v-show="!mobile" class="nav-links">
           <li><router-link to="/about" class="link">About</router-link></li>
@@ -41,22 +41,18 @@ export default {
 }
 </script>
 <style scoped>
-    .navbar{
-    position: fixed;
-    top:0;
-    padding-left: 0px;
-    z-index: 1030; 
-    width:fit-content
-   }
+   
    nav{
     background: #6D5E7D;
     opacity: 0.9;
-    box-shadow: 20px;
+    box-shadow: 20px ;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index:3;
+    padding: 10px;
+    width: 100%;
    }
    .nav-links{
     text-decoration:none;
@@ -67,21 +63,61 @@ export default {
    .nav-links:not(.nav-brand){
     display:flex;
     justify-content: end;
+    
    }
    ul{
     list-style: none;
    }
-   .nav-link{
+   .link{
+    text-decoration: none;
     color:#D8BFD8;
+    border-bottom: none;
+    padding: 5px;
    }
-   .nav-brand{
-    object-position: left top;
+   .branding{
+    width:30px;
+    height:30px;
+    margin-bottom:-15px;
    }
-   .nav-brand{
-    height:10px;
-    width:10px;
-    border-radius: 20px;
+   .brand .nav-brand{
+    height:100%;
+    width:100%;
    }
+
+   .image-div{
+    width: 80px;
+    height: 50px;
+    margin-bottom:-10px;
+   }
+   .img{
+    width: 100%;
+    max-width: fit-content;
+    height: 100%;
+    max-height: fit-content;
+   }
+   .nav-links .router-link-exact-active {
+    border-bottom: display;
+    transition: all 0.35s ease-in-out;
+   }
+   .icon{
+    display: flex;
+    justify-content: end;
+   }
+   .fa-bars{
+    font-size: 200%;
+   }
+   .nav-link{
+    text-decoration: none;
+    color:#D8BFD8;
+    border-bottom: none;
+    padding: 5px;
+   }
+   .dropdown{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+   }
+
 
     /* nav{
         position:relative;

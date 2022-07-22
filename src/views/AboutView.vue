@@ -18,8 +18,9 @@ export default {
 }
 </script>
 <style scoped>
-   section{
+   /* section{
+    padding-top: 15vh;
     height:100vh;
     background-color: #EBE2F4;
-   } 
+   }  */
 </style>

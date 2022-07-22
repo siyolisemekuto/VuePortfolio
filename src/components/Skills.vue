@@ -44,13 +44,7 @@
     <p class="card-text">Competent</p>
   </div>
   </div>
-  <div class="col-md-2" id="skill-cards">
-  <i class="fa-brands fa-vuejs" id="skill-image"></i>
-  <div class="card-body">
-    <h5 class="card-title">My SQL</h5>
-    <p class="card-text">Competent</p>
-  </div>
-  </div>
+  
           </div>
   </div>
 </template>
@@ -66,5 +60,13 @@ export default {
   .card{
     display:flex;
     flex:wrap;
+    justify-content: space-around;
+  }
+  #skill-image{
+    font-size:600%;
+    object-position: center;
+  }
+  .row{
+    padding-left:5%;
   }
 </style>
