@@ -1,14 +1,14 @@
 <template>
-    <div id="testimonials">
-        <div v-for="testimonial in testimonials" :key="testimonial.id">
-            <img :src="testimonial.imgurl">
-            <div class="info">
-                <h1>{{testimonial.name}}</h1>
-                <p>{{testimonial.comment}}</p>
-            </div>
-        </div>
+    <div id="testimonials" class="row">
+        <div class="card col-md-3" v-for="testimonial in testimonials" :key="testimonial.id">
+  <img :src="testimonial.imgurl" class="card-img-top rounded-circle" alt="image">
+  <div class="card-body">
+    <p class="card-text">{{testimonial.comment}}</p>
+  </div>
+</div>
     </div>
 </template>
+
 <script>
 export default {
     data(){
@@ -56,5 +56,23 @@ export default {
 }
 </script>
 <style>
-    
+    .card{
+        width: 18rem;
+        margin:15px;
+        border-radius:50px !important;
+    }
+    .card:hover {
+        transform: scale(1.2);
+    }
+    .rounded-circle{
+       float: left;
+    width:  100px;
+    height: 200px;
+    object-fit: cover;
+    margin:5px;
+    }
+    #testimonials{
+        display:flex;
+        justify-content: space-around;
+    }
 </style>

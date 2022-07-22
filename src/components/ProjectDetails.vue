@@ -10,8 +10,8 @@
               <h4>{{project.name}}</h4>
               <div class="project-desc shadow p-3 lh-base">{{project.description}}</div>
               <div id="project-link">
-                <a href="project.github"><i class="fa-brands fa-github-square"></i></a>
-                <a href="project.netlify"><i class="fa-solid fa-up-right-from-square py-4"></i></a>
+                <a :href="project.github" target="_blank"><i class="fa-brands fa-github-square"></i></a>
+                <a :href="project.netlify" target="_blank"><i class="fa-solid fa-up-right-from-square py-4"></i></a>
               </div>
             </div>
             

@@ -9,15 +9,15 @@
         </div>
           <div class="d-flex flex-column bd-highlight mb-1" id="socials">
             <ul class="smlink">
-            <li class="p-2 bd-highlight"><a href="https://www.linkedin.com/in/siyolise-mekuto-b10372204/"><i class="fa-brands fa-linkedin"   id="linkedin"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://github.com/siyolisemekuto"><i class="fa-brands fa-github-square"  id="github"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://codepen.io/siyolisemekuto"><i class="fa-brands fa-codepen" id="codepen"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://twitter.com/SiyoliseM_"><i class="fa-brands fa-twitter-square"  id="twitter"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://www.facebook.com/profile.php?id=100075997964842"><i class="fa-brands fa-facebook-square"  id="facebook"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://www.linkedin.com/in/siyolise-mekuto-b10372204/" target="_blank"><i class="fa-brands fa-linkedin"   id="linkedin"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://github.com/siyolisemekuto" target="_blank"><i class="fa-brands fa-github-square"  id="github"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://codepen.io/siyolisemekuto" target="_blank"><i class="fa-brands fa-codepen" id="codepen"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://twitter.com/SiyoliseM_" target="_blank"><i class="fa-brands fa-twitter-square"  id="twitter"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://www.facebook.com/profile.php?id=100075997964842" target="_blank"><i class="fa-brands fa-facebook-square"  id="facebook"></i></a></li>
             </ul>
           </div>
         <div id="myEmail" class="fixed-bottom">
-            <a href="mailto:siyozamekuto2.0@gmail.com">siyozamekuto2.0@gmail.com</a>
+            <a href="mailto:siyozamekuto2.0@gmail.com" target="_blank">siyozamekuto2.0@gmail.com</a>
         </div>
   
 </template>

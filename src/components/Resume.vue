@@ -7,7 +7,7 @@
     </div>
     <div class="tab-content col-md-6" id="v-pills-tabContent">
       <div class="tab-pane fade show active"  id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
-        <a href={{experience.link}}><h5 class="mb-0">{{experience.role}}</h5></a>
+        <a :href="experience.link" target:_blank><h5 class="mb-0">{{experience.role}}</h5></a>
         <span id="date" class="mb-15">{{experience.date}}</span>
         <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i>{{experience.achievement}}</p>
       </div>

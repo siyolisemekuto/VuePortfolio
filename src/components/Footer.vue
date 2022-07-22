@@ -1,7 +1,7 @@
 <template>
     <footer class="text-center shadow p-3">
         <span>Created by Siyolise Mekuto, 2022  </span>
-        <a href= https://github.com/siyolisemekuto/VuePortfolio><i class="fa-solid fa-code-branch"></i></a>
+        <a href= https://github.com/siyolisemekuto/VuePortfolio target='_blank'><i class="fa-solid fa-code-branch"></i></a>
     </footer>
 </template>
 <script>
