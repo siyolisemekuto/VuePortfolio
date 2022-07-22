@@ -1,6 +1,6 @@
 <template>
-    <section class="container shadow p-3 mb-5 bg-body rounded">
-      <div>
+    <section id="section" >
+      <div class="container shadow p-3 mb-5 bg-body rounded">
       <Resume/> 
       <Skills/> 
       </div>
@@ -19,5 +19,11 @@ export default {
 }
 </script>
 <style scoped>
-
+section{
+ background: linear-gradient(to top, #6D5E7D 0%,#D8BFD8 25%,#D8BFD8 50%,#D8BFD8 75%, #6D5E7D 100%);
+ padding-top:15vh;
+}
+a{
+    text-decoration: none !important;
+  }
 </style>

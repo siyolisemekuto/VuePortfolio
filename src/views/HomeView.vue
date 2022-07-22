@@ -18,10 +18,10 @@ export default {
 }
 </script>
 <style scoped>
-section{
+/* section{
     background-color: #EBE2F4;
     height:100vh;
-  }
+  } */
 
 
 </style>

@@ -23,19 +23,13 @@ export default{
 <style>
 #app{
   font-family: 'ubuntu';
-    background-color: #EBE2F4;
+    /* background-color: #EBE2F4; */
 
 }
   .container{
     height:fit-content !important;
     
   }
-  section{
-    background-color: #EBE2F4;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-    height:100vh;
-  } 
   
 
 

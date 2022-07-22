@@ -1,8 +1,37 @@
 <template>
     <header :class="{'scrolled-nav':scrollPosition}">
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+  <div class="container-fluid">
+       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " id="navbarNav">
+       <ul  class="navbar-nav w-100">
+          <li><router-link to="/about" class="nav-link  ">About</router-link></li>
+          <li><router-link to="/experience" class="nav-link">Experience</router-link></li>
+          <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
+          <li><router-link to="/testimonials" class="nav-link">Testimonials</router-link></li>
+          <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
+        </ul>
+    </div>
+  </div>
+</nav>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <!-- <nav>
         <div class="branding">
-       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img"></router-link>
+       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
         </div>  
         <ul v-show="!mobile" class="nav-links">
           <li><router-link to="/about" class="link">About</router-link></li>
@@ -23,7 +52,7 @@
        <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
        </ul>
        </transition>
-    </nav>
+    </nav> -->
     </header>
 </template>
 
@@ -33,11 +62,33 @@ export default {
         return{
             logo:"https://i.postimg.cc/DfBt2NmB/logo-removebg-preview.png",
             scrollPosition:null,
-            mobile:null,
-            mobileNav:null,
+            mobile:false,
+            mobileNav:false,
             windowWidth:null,
         }
+    },
+    methods: {
+     created(){
+    window.addEventListener('resize',this.ScreenChecker);
+    this.ScreenChecker()
+  },
+  methods:{
+    toggleMobileNav(){
+      this.mobileNav = !this.mobileNav
+    },
+     ScreenChecker(){
+      this.windowWidth = window.innerWidth
+      if(this.windowWidth <= 750){
+        return this.mobile = true;
+       
+      }else{
+       return this.mobile = false,
+        this.mobileNav  = false;
+        
+      }
     }
+  }  
+    },
 }
 </script>
 <style scoped>
@@ -54,11 +105,11 @@ export default {
     padding: 10px;
     width: 100%;
    }
-   .nav-links{
+   .nav-link{
     text-decoration:none;
     display:flex;
     align-items: center;
-    font-size:large;
+    
    }
    .nav-links:not(.nav-brand){
     display:flex;
@@ -67,7 +118,16 @@ export default {
    }
    ul{
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
+     
    }
+   li{
+    text-align: end!important;
+    font-size:bold;
+    color:#000;
+   }
+   
    .link{
     text-decoration: none;
     color:#D8BFD8;

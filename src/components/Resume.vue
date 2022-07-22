@@ -6,7 +6,7 @@
       <button class="nav-link " id={{experience.id}} data-bs-toggle="pill" data-bs-target={{experience.id}} type="button" role="tab" aria-controls={{experience.name}} aria-selected="true">{{experience.name}}</button>
     </div>
     <div class="tab-content col-md-6" id="v-pills-tabContent">
-      <div class="tab-pane fade"  id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
+      <div class="tab-pane fade show active"  id={{experience.id}} role="tabpanel" aria-labelledby={{experience.name}}>
         <a href={{experience.link}}><h5 class="mb-0">{{experience.role}}</h5></a>
         <span id="date" class="mb-15">{{experience.date}}</span>
         <p><i class="fa-solid fa-caret-right" id="arrow-icon"></i>{{experience.achievement}}</p>
@@ -18,15 +18,7 @@
 </template>
 <script>
 export default {
-  methods:{
-    show(id){
-      return{
-        "experience.role"
-        "experience.date"
-        "experience.achievement" 
-      }
-    }
-  }
+  
     data(){
       return{
         "experiences":[{
@@ -93,4 +85,16 @@ export default {
    .row{
     display:flex;
    } 
+   .tab-content{
+    text-align: end;
+    margin: auto;
+    margin-right:8%;
+    width: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    font-size:110%;
+   }
+   .nav-link{
+    font-size:130%;
+   }
 </style>

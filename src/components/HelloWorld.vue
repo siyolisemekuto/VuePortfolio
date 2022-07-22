@@ -1,6 +1,6 @@
 <template>
 
-    <div id="particular"></div>
+    <div id="landing"></div>
         <div class="container">
             <p class="fs-5">Hi, I am</p>
             <h2>Siyolise Mekuto,</h2>
@@ -31,20 +31,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-#landing p{
-    color: #8892B0;
-}
-#landing{
+
+    
+
+/* #landing{
     height: 100vh;
     position: relative;
-}
-#particles-js{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+} */
+
 #landing div.container{
     text-align: justify;
     padding-top: 200px;
