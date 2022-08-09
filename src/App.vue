@@ -26,7 +26,7 @@ export default{
 <style>
 #app{
   font-family: 'ubuntu';
-    /* background-color: #EBE2F4; */
+  background-color: rgb(5,14,26)
 
 }
   .container{
