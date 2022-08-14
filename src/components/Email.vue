@@ -16,9 +16,14 @@ export default {
     position: fixed;
     bottom: 40%;
     left: 92%; 
-    text-decoration: none;
+    
+}
+a{
+text-decoration: none;
     color: rgb(204, 214, 246) !important;  
     transition:0.3 linear;
-    
+}
+a:hover{
+     color: rgb(255, 20, 147) !important;
 }
 </style>

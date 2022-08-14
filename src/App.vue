@@ -24,9 +24,17 @@ export default{
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300&display=swap');
+
+
+ section{
+    background-color:rgba(5, 14, 26);
+    color: rgb(204, 214, 246);
+    padding-top: 20px;
+} 
 #app{
-  font-family: 'ubuntu';
-  background-color: rgb(5,14,26)
+  font-family: 'Courier New', Courier, monospace;
+  background-color: rgba(5, 14, 26);
 
 }
   .container{

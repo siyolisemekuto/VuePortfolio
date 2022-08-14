@@ -1,77 +1,23 @@
 <template>
-    <header :class="{'scrolled-nav':scrollPosition}">
-    <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <nav class="navbar navbar-expand-lg navbar-light ">
-  <div class="container-fluid">
-       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNav">
-       <ul  class="navbar-nav w-100">
-          <li><router-link to="/about" class="nav-link  ">About</router-link></li>
-          <li><router-link to="/experience" class="nav-link">Experience</router-link></li>
-          <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
-          <li><router-link to="/testimonials" class="nav-link">Testimonials</router-link></li>
-          <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
-        </ul>
-    </div>
-  </div>
-</nav>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <!-- <nav>
-        <div class="branding">
-       <router-link to="/" class="nav-brand nav-links image-div" ><img :src="logo" class="img" :class="{active}"></router-link>
-        </div>  
-        <ul v-show="!mobile" class="nav-links">
-          <li><router-link to="/about" class="link">About</router-link></li>
-          <li><router-link to="/experience" class="link">Experience</router-link></li>
-          <li><router-link to="/projects" class="link">Projects</router-link></li>
-          <li><router-link to="/testimonials" class="link">Testimonials</router-link></li>
-          <li><router-link to="/contact" class="link">Contact</router-link></li>
-        </ul>
-       <div class="icon">
-        <i @click="toggleMobileNav" v-show="mobile" class="fa-solid fa-bars" :class="{'icon-active':mobileNav}"></i>
-       </div>
-       <transition name="mobile-nav">
-       <ul v-show="mobileNav" class="dropdown">
-       <li><router-link to="/about" class="nav-link">About</router-link></li>
-       <li><router-link to="/experience" class="link">Experience</router-link></li>
-       <li><router-link to="/projects" class="nav-link">Projects</router-link></li>
-       <li><router-link to="/testimonials" class="link">Testimonials</router-link></li>
-       <li><router-link to="/contact" class="nav-link">Contact</router-link></li>
-       </ul>
-       </transition>
-    </nav> -->
-    </header>
+  <div id="navbar">
+      <nav class="navbar navbar-expand-md navbar-dark shadow p-3">
+          <router-link to=/ class="navbar-brand">SM</router-link>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-links" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <ul class="navbar-nav collapse navbar-collapse justify-content-end" id="nav-links">
+                  <li><router-link to=/about class=nav-link id="nav-about"><span>01.</span>About</router-link></li>
+                  <li><router-link to=/experience class=nav-link id="nav-experience"><span>02.</span>Experience</router-link></li>                        
+                  <li><router-link to=/projects class=nav-link id="nav-projects"><span>03.</span>Projects</router-link></li>
+                  <li><router-link to=/testimonials class=nav-link id="nav-testimonials"><span>04.</span>Testimonials</router-link></li>
+                  <li><router-link to=/contact class=nav-link  id="nav-contact"><span>05.</span>Contact</router-link></li>
+                </ul>
+        </nav>
+      </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            logo:"https://i.postimg.cc/DfBt2NmB/logo-removebg-preview.png",
-            scrollPosition:null,
-            mobile:false,
-            mobileNav:false,
-            windowWidth:null,
-        }
-    },
-    methods: {
-     created(){
-    window.addEventListener('resize',this.ScreenChecker);
-    this.ScreenChecker()
-  },
   methods:{
     toggleMobileNav(){
       this.mobileNav = !this.mobileNav
@@ -88,95 +34,74 @@ export default {
       }
     }
   }  
-    },
-}
+    }
+
 </script>
 <style scoped>
-   
-   nav{
-    background: #6D5E7D;
-    opacity: 0.9;
-    box-shadow: 20px ;
+#navbar .navbar{
+    background: rgba(5, 14, 26, 0.9);
+    box-shadow: 20px;
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
-    z-index:3;
-    padding: 10px;
-    width: 100%;
-   }
-   .nav-link{
-    text-decoration:none;
-    display:flex;
-    align-items: center;
-    
-   }
-   .nav-links:not(.nav-brand){
-    display:flex;
-    justify-content: end;
-    
-   }
-   ul{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
-     
-   }
-   li{
-    text-align: end!important;
-    font-size:bold;
-    color:#000;
-   }
-   
-   .link{
+    z-index: 3;
+}
+.navbar-brand{
+    font-family: 'Fira Code', monospace;
+    color: rgb(255, 20, 147) !important;
+}
+#nav-about{
+    padding-right: 15px;
     text-decoration: none;
-    color:#D8BFD8;
-    border-bottom: none;
-    padding: 5px;
-   }
-   .branding{
-    width:30px;
-    height:30px;
-    margin-bottom:-15px;
-   }
-   .brand .nav-brand{
-    height:100%;
-    width:100%;
-   }
+    color: rgb(204, 214, 246);
+    font-size: 15px;
+}
+#nav-about:hover{
+    color: rgb(255, 20, 147); 
+}
+#nav-experience{
+    padding-right: 15px;
+    text-decoration: none;
+    color: rgb(204, 214, 246);
+    font-size: 15px;
+}
+#nav-experience:hover{
+    color: rgb(255, 20, 147); 
+}
+#nav-projects{
+    padding-right: 15px;
+    text-decoration: none;
+    color: rgb(204, 214, 246);
+    font-size: 15px;
+}
+#nav-projects:hover{
+    color: rgb(255, 20, 147); 
+}
+#nav-testimonials{
+    padding-right: 15px;
+    text-decoration: none;
+    color: rgb(204, 214, 246);
+    font-size: 15px;
+}
+#nav-testimonials:hover{
+    color: rgb(255, 20, 147); 
+}
+#nav-contact{
+    padding-right: 15px;
+    text-decoration: none;
+    color: rgb(204, 214, 246);
+    font-size: 15px;
+}
+#nav-contact:hover{
+    color: rgb(255, 20, 147); 
+}
+#navbar span{
+    font-family: 'Fira Code', monospace;
+    color: rgb(255, 20, 147);
+    font-size: 15px;
+}
 
-   .image-div{
-    width: 80px;
-    height: 50px;
-    margin-bottom:-10px;
-   }
-   .img{
-    width: 100%;
-    max-width: fit-content;
-    height: 100%;
-    max-height: fit-content;
-   }
-   .nav-links .router-link-exact-active {
-    border-bottom: display;
-    transition: all 0.35s ease-in-out;
-   }
-   .icon{
-    display: flex;
-    justify-content: end;
-   }
-   .fa-bars{
-    font-size: 200%;
-   }
-   .nav-link{
-    text-decoration: none;
-    color:#D8BFD8;
-    border-bottom: none;
-    padding: 5px;
-   }
-   .dropdown{
-    display:flex;
-    flex-direction: column;
-    justify-content: end;
-   }
 
 
     /* nav{

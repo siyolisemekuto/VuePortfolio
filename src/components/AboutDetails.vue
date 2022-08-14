@@ -3,9 +3,9 @@
             <h1>About</h1>
             <div class="row" id="about-info">  
               <div class="col-md-6 info ">
-                <p class="lh-base">I am a lifelong learner with extensive experience in communication. I enjoy working individually but value teamwork. I have been described as pleasant to be around and enthusiastic. I want to use the web development skills I am learning for business and community development.</p>
+                <p class="lh-base">I am a lifelong learner with extensive experience in communications. I enjoy working individually but value teamwork. I have been described as being pleasant to be around, having a good worh ethic and someone who takes initiative . I want to use the web development skills I am learning for business and community development.</p>
                 <p class="lh-base">I enjoy reading political fiction, watching movies and theatre productions.</p>
-                <p class="lh-base"> I looked into coding when I was at a cross-roads in my life. After university I realised I am motivated by creating things and standing apart from the crowd. Taking a coding course satisfied those yearnings in me. From the get go at the Life Choices Bootcamp, I have been able to challenge and express myself in a way that is relevant.</p>
+                <p class="lh-base"> I looked into coding when I was at a cross-roads in my life. After university I realised I am motivated by solving problems and creating things. Taking a coding course satisfied those yearnings in me. It is something I want to incorporate in all my future endevours.</p>
                 <h5>I think of myself as:</h5>
                 <ul>
                   <li>Trustworthy</li>
@@ -46,12 +46,15 @@ export default{
 </script>
 
 <style scoped>
-
+#about{
+  background-color: rgba(5, 14, 26);
+}
 #siyolise{
 object-fit:cover;
 display: flex;
 align-items: center;
 justify-content: center;
+
 }
 #about-info{
   display: flex;
@@ -59,8 +62,13 @@ justify-content: center;
 }
 .info{
   padding-left:8%;
+  margin-top:20px;
 }
-
+img{
+  width: 70%;
+  height: 70%;
+  object-fit:cover;
+}
 
 
 /* .active{

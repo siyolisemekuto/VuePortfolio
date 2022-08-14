@@ -1,22 +1,24 @@
 <template>
 
-    <div id="landing"></div>
-        <div class="container">
+     <div class="container d-flex">
+         <div class="d-flex flex-column bd-highlight mb-1" id="socials">
+            <ul>
+            <li class="p-2 bd-highlight"><a href="https://www.linkedin.com/in/siyolise-mekuto-b10372204/" target="_blank"><i class="fa-brands fa-linkedin smlink" id="linkedin"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://github.com/siyolisemekuto" target="_blank"><i class="fa-brands fa-github-square smlink" id="github"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://codepen.io/siyolisemekuto" target="_blank"><i class="fa-brands fa-codepen smlink" id="codepen"></i></a></li>
+            <li class="p-2 bd-highlight"><a href="https://www.facebook.com/profile.php?id=100075997964842" target="_blank"><i class="fa-brands fa-facebook-square smlink" id="facebook"></i></a></li>
+            </ul>
+          </div>
+        <div style="margin-top: 5px;">
             <p class="fs-5">Hi, I am</p>
             <h2>Siyolise Mekuto,</h2>
             <p class="fs-1">An aspiring web developer.</p>
-            <p>I have recently begun my journey in web development and currently work with HTML, CSS and Bootstrap.</p>
         </div>
-          <div class="d-flex flex-column bd-highlight mb-1" id="socials">
-            <ul class="smlink">
-            <li class="p-2 bd-highlight"><a href="https://www.linkedin.com/in/siyolise-mekuto-b10372204/" target="_blank"><i class="fa-brands fa-linkedin"   id="linkedin"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://github.com/siyolisemekuto" target="_blank"><i class="fa-brands fa-github-square"  id="github"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://codepen.io/siyolisemekuto" target="_blank"><i class="fa-brands fa-codepen" id="codepen"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://twitter.com/SiyoliseM_" target="_blank"><i class="fa-brands fa-twitter-square"  id="twitter"></i></a></li>
-            <li class="p-2 bd-highlight"><a href="https://www.facebook.com/profile.php?id=100075997964842" target="_blank"><i class="fa-brands fa-facebook-square"  id="facebook"></i></a></li>
-            </ul>
-          </div>
-        
+         
+        <div id="myEmail" class="fixed-bottom">
+            <a href="mailto:siyozamekuto2.0@gmail.com" class="email">siyozamekuto2.0@gmail.com</a>
+        </div>
+        </div>
   
 </template>
 
@@ -30,31 +32,34 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-    
+.email{
+    text-decoration:none;
+}  
 
-/* #landing{
-    height: 100vh;
-    position: relative;
-} */
-
-#landing div.container{
-    text-align: justify;
-    padding-top: 200px;
-  background-color: inherit;
+a:link {
+    text-decoration: none;
+    color: rgb(204, 214, 246) !important;
+  }
+a{
+    color: rgb(204, 214, 246) !important; 
+    font-family: 'Courier New', Courier, monospace;
 }
-#landing p.fs-5{
+
+a:hover{
+    color: rgb(255, 20, 147) !important;
+}
+
+h1{
     font-family: 'Fira Code', monospace;
-    font-size: 15px;
-    margin-bottom: 30px;
-    color: #ff1493;
+    color: rgb(204, 214, 246);
 }
-#landing h1{
-    font-size: 72.7px;
-    color: rgb(204 214 246);
+
+div.container{
+    text-align: justify;
+    padding-top: 100px;
+    height:90vh;
 }
-#landing p{
-    font-size: 20px;
-}
+
 #socials{
     display: flex;
     flex-direction: column;
@@ -121,15 +126,18 @@ export default {
 ul{
     list-style-type: none;
 }
-
+#myEmail{
+    transform: rotate(90deg);
+    position: fixed;
+    bottom: 40%;
+    left: 92%; 
+    text-decoration: none;
+    color: rgb(204, 214, 246) !important;  
+    transition:0.3 linear;
+    
+}
 #twitter:hover{
     color: rgb(255, 20, 147);
 }
-    
-#landing #particular{
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
+
 </style>

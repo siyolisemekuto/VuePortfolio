@@ -1,7 +1,12 @@
 <template>
-    <footer class="text-center shadow p-3">
-        <span>Created by Siyolise Mekuto, 2022  </span>
-        <a href= https://github.com/siyolisemekuto/VuePortfolio target='_blank'><i class="fa-solid fa-code-branch"></i></a>
+    <footer class="text-center">
+        <span>
+                <p>Copyright &copy;2022, All rights reserved. </p>
+                <!-- link to githubnpm -->
+                <a href=https://github.com/siyolisemekuto/VuePortfolio target='_blank'> 
+                Made by Siyolise Mekuto.
+                </a>
+            </span>
     </footer>
 </template>
 <script>
@@ -18,11 +23,11 @@ export default {
 </script>
 <style>
    footer{
-    background-color:#6D5E7D;
-    height:70px !important;
+    background-color:rgba(5, 14, 26, 0.9);
+    height:80px !important;
+    box-shadow: 3px;
 }
    a{
     text-decoration: none;
-    color:#D8BFD8;
 } 
 </style>
